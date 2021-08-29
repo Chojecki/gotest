@@ -8,10 +8,10 @@ import (
 func main() {
 	r := gin.Default()
 
-	api := r.Group("/api")
+	api := r.Group("/api/v1")
 
-	api.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{"message": "pong"})
+	api.GET("/ktojestpanem", func(c *gin.Context) {
+		c.JSON(200, gin.H{"message": "widzew"})
 	})
 
 	r.Use(static.Serve("/", static.LocalFile("./views", true)))
